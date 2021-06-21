@@ -99,17 +99,21 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         }
       });
 
-    fourthController.forward();
+   
+    Timer(Duration(seconds: 2), () {
+      firstController.forward();
+    });
+
+    Timer(Duration(milliseconds: 1600), () {
+      secondController.forward();
+    });
 
     Timer(Duration(milliseconds: 800), () {
       thirdController.forward();
     });
-    Timer(Duration(milliseconds: 1600), () {
-      secondController.forward();
-    });
-    Timer(Duration(seconds: 2), () {
-      firstController.forward();
-    });
+
+    fourthController.forward();
+
   }
 
   @override
